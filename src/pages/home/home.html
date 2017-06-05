@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+  	<ion-title>
+  		Daftar KERJA
+  	</ion-title>
+  	<ion-buttons end>
+  		<button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+  	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-card *ngFor="let item of items" (click)="viewItem(item)">
+    <ion-card-content>
+      {{item.title}} <br> {{item.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
